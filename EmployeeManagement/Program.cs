@@ -8,7 +8,11 @@ internal class Program
         //app.MapGet("/", () => System.Diagnostics.Process.GetCurrentProcess().ProcessName);
 
         //app.MapGet("/", () => "Hello World!");
-        app.UseFileServer();
+
+        FileServerOptions options = new FileServerOptions();
+        options.DefaultFilesOptions.DefaultFileNames.Clear();
+        options.DefaultFilesOptions.DefaultFileNames.Add("foo.html");
+        app.UseFileServer(options);
 
         app.Run();
     }
