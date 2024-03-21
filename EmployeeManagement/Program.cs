@@ -7,8 +7,7 @@ internal class Program
 
         //app.MapGet("/", () => System.Diagnostics.Process.GetCurrentProcess().ProcessName);
 
-        app.MapGet("/", () => "Hello World!");
-
+        //app.MapGet("/", () => "Hello World!");
         app.UseFileServer();
 
         app.Run();
