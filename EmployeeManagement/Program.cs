@@ -1,3 +1,4 @@
+using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 
 internal class Program
@@ -5,7 +6,11 @@ internal class Program
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        builder.Services.AddMvcCore(options => options.EnableEndpointRouting = false);
+        builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+
+        // Dependency Injection
+        builder.Services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
