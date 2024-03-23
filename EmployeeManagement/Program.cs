@@ -5,7 +5,7 @@ internal class Program
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+        builder.Services.AddMvcCore(options => options.EnableEndpointRouting = false);
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())

@@ -1,10 +1,12 @@
-﻿namespace EmployeeManagement.Controller
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace EmployeeManagement.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index()
+        public JsonResult Index()
         {
-            return "Hello from Home controller Index method";
+            return Json(new { id = 1, name = "Priyanka"} );
         }
     }
 }
