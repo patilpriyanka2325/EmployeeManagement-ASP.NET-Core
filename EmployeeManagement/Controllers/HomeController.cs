@@ -25,7 +25,8 @@ namespace EmployeeManagement.Controllers
             //return View(employee);
             //return View("Test");    // Test.cshtml from views/Home
             //return View("MyViews/Test.cshtml");     // Test.cshtml from MyViews folder
-            return View("../Test/Update");      // Update.cshtml from Views/Test
+            //return View("../Test/Update");      // Update.cshtml from Views/Test
+            return View("../../MyViews/Test");  // by using relative file path    // Test.cshtml from MyViews folder
         }
     }
 }
